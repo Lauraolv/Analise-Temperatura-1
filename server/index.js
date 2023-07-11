@@ -14,15 +14,40 @@ app.use((req, res, next) => {
   );
 
 // A rota app.get('/', ...) é definida, indicando que esse código será executado quando uma solicitação GET for feita 
-app.get('/', (req,res) => {    
-    let array = [];
-    for(let i = 0; i < 32; i++)
+app.get("/", (req, res) => {
+  let array1 = [];
+  let array2 = [];
+  let resArray;
+  let auxArray = [];
+
+  for (let i = 0; i < 32; i++) 
+  {
+    for (let j = 0; j < 128; j++) 
     {
-        array[i] = [];
-        for(let j = 0; j < 128; j++)
-            array[i][j] = j;
+      auxArray.push(j);
     }
-    res.send(array); // o array preenchido é enviado como resposta para a solicitação GET
+
+    array1.push(auxArray);
+    auxArray = [];
+  }
+
+  for (let i = 0; i < 32; i++)
+  {
+    for (let j = 0; j < 128; j++) 
+    {
+      auxArray.push(127 - j);
+    }
+
+    array2.push(auxArray);
+    auxArray = [];
+  }
+
+  if (Math.floor(Math.random() * 2) === 0)  // Math.random retorna um decimal aleatório entre 0 e 1
+    resArray = array1;
+  else
+    resArray = array2;
+
+  res.send(resArray); // um dos arrays preenchidos é enviado como resposta para a solicitação GET
 });
 
 app.listen(3001, () => {

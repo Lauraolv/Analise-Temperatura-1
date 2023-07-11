@@ -4,10 +4,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-    overflow-x: hidden;
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,18 +21,17 @@ header{
     font-size: large;
 }
 
-.teslaLogo{
+.teslaLogo {
     height: 75%;
     width: auto;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 83vh;
-    padding: 10px;
+    height: 84vh;
     background-color: #313441;
     color: #FCFBF4;
     gap: 20px;
@@ -61,7 +59,7 @@ main{
     cursor: pointer;
 }
 
-.button:active{
+.button:active {
     border: 1px solid #7ed957;
 }
 
@@ -70,29 +68,26 @@ main{
     width: auto;
 }
 
-.matriz{
+.matriz {
     display: flex;
     flex-direction: column;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 15);
 }
-.row
-{
+.row {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.color
-{
+.color {
     width: 10px;
     height: 10px;
     margin: 0px;
     cursor: pointer;
 }
 
-.selected
-{
+.selected {
     width: 10px;
     height: 10px;
     margin: 0px;
@@ -101,21 +96,18 @@ main{
     inset 0 1px 0 black;
 }
 
-
-.infos{
+.infos {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: flex-start;
     width: 100%;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-shadow: black 0.2em 0.2em 0.2em;
-
 }
 
-.inputs
-{
+.inputs {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -123,7 +115,7 @@ main{
     gap: 5px;
 }
 
-input{
+input {
     background-color: black;
     border: 1px solid #FCFBF4;
     color: #7ed957;
@@ -132,17 +124,16 @@ input{
     width: 120px;
     height: 30px;
     font-weight: bold;
-
 }
 
-.medias{
+.medias {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.valores{
+.valores {
     background-color: black;
     border: 1px solid #FCFBF4;
     color:#7ed957;
@@ -152,10 +143,10 @@ input{
     margin-bottom: 5px;
 }
 
-footer{
+footer {
     position: relative;
     width: 100%;
-    height: 7vh;
+    height: 6vh;
     display: flex;
     justify-content: flex-end;
     align-items: center;
